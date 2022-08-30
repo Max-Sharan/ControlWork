@@ -16,3 +16,14 @@ for (int i = 0; i < array.Length; i++)
     if (array[i].Length <= 3)
         count++;
 }
+string[] matrix = new string[count];
+int j = 0;
+for (int i = 0; i < array.Length; i++)
+{
+    if (array[i].Length <= 3)
+    {
+        matrix[j] = array[i];
+        j++;
+    }
+}
+Console.WriteLine("Новый массив: [ " + string.Join(", ", matrix) + " ]");
